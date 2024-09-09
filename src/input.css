@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.prd-template .slick-track {
+    display: flex;
+}
+.prd-template .slick-list.draggable {
+    display: block;
+    overflow: hidden;
+}
+.prd-template button.slick-arrow {
+    position: absolute;
+    display: block;
+    width: 35px;
+    height: 35px;
+    left: -5px;
+    z-index: 1;
+}
+.prd-template button.slick-arrow::before{
+    display: none;
+}
+.prd-template button.slick-next{
+    left: auto;
+    right: -10px;
+}
+@media screen and (max-width:640px) {
+    .prd-template button.slick-arrow,
+    .prd-template button.slick-arrow svg {
+        width: 19px;
+        height: 19px;
+    }
+    .prd-template button.slick-prev{
+        left: 5px;
+    }
+    .prd-template button.slick-next{
+        right: 5px;
+    }
+}
